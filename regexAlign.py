@@ -5,9 +5,6 @@
 
 import re
 
-r = r'when [Ii] tasked my mom[, iI]* didnt flinch to fuck .. ass'
-s = 'when i asked my, mom, I didn\'t even flinch to fuck an ass'
-
 def regexAlign(regex,text):
     class Flex:
         def __init__(self,match,offset=0):
@@ -59,10 +56,6 @@ def regexAlign(regex,text):
     regtext += snippets[-1]
 
     text = '\x00' + text
-
-    ################################################
-    global scores,pointers
-
     s1,s2 = regtext,text
 
     scores   = [[0 for i in s2] for k in s1]
